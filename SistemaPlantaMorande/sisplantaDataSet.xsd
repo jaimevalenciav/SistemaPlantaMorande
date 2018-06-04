@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="sisplantaDataSet" targetNamespace="http://tempuri.org/sisplantaDataSet.xsd" xmlns:mstns="http://tempuri.org/sisplantaDataSet.xsd" xmlns="http://tempuri.org/sisplantaDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="sisplantaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sisplantaConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SistemaPlantaMorande.My.MySettings.GlobalReference.Default.sisplantaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="articulos_morandeTableAdapter" GeneratorDataComponentClassName="articulos_morandeTableAdapter" Name="articulos_morande" UserDataComponentName="articulos_morandeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sisplantaConnectionString (MySettings)" DbObjectName="sisplanta.dbo.articulos_morande" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CodigoArticulo, NombreArticulo, Familia, DestinoMarca FROM dbo.articulos_morande</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CodigoArticulo" DataSetColumn="CodigoArticulo" />
+              <Mapping SourceColumn="NombreArticulo" DataSetColumn="NombreArticulo" />
+              <Mapping SourceColumn="Familia" DataSetColumn="Familia" />
+              <Mapping SourceColumn="DestinoMarca" DataSetColumn="DestinoMarca" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="sisplantaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="sisplantaDataSet" msprop:Generator_UserDSName="sisplantaDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="articulos_morande" msprop:Generator_TableClassName="articulos_morandeDataTable" msprop:Generator_TableVarName="tablearticulos_morande" msprop:Generator_TablePropName="articulos_morande" msprop:Generator_RowDeletingName="articulos_morandeRowDeleting" msprop:Generator_RowChangingName="articulos_morandeRowChanging" msprop:Generator_RowEvHandlerName="articulos_morandeRowChangeEventHandler" msprop:Generator_RowDeletedName="articulos_morandeRowDeleted" msprop:Generator_UserTableName="articulos_morande" msprop:Generator_RowChangedName="articulos_morandeRowChanged" msprop:Generator_RowEvArgName="articulos_morandeRowChangeEvent" msprop:Generator_RowClassName="articulos_morandeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodigoArticulo" msprop:Generator_ColumnVarNameInTable="columnCodigoArticulo" msprop:Generator_ColumnPropNameInRow="CodigoArticulo" msprop:Generator_ColumnPropNameInTable="CodigoArticuloColumn" msprop:Generator_UserColumnName="CodigoArticulo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NombreArticulo" msprop:Generator_ColumnVarNameInTable="columnNombreArticulo" msprop:Generator_ColumnPropNameInRow="NombreArticulo" msprop:Generator_ColumnPropNameInTable="NombreArticuloColumn" msprop:Generator_UserColumnName="NombreArticulo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Familia" msprop:Generator_ColumnVarNameInTable="columnFamilia" msprop:Generator_ColumnPropNameInRow="Familia" msprop:Generator_ColumnPropNameInTable="FamiliaColumn" msprop:Generator_UserColumnName="Familia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DestinoMarca" msprop:Generator_ColumnVarNameInTable="columnDestinoMarca" msprop:Generator_ColumnPropNameInRow="DestinoMarca" msprop:Generator_ColumnPropNameInTable="DestinoMarcaColumn" msprop:Generator_UserColumnName="DestinoMarca">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:articulos_morande" />
+      <xs:field xpath="mstns:CodigoArticulo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
